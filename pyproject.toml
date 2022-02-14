@@ -1,0 +1,45 @@
+[tool.poetry]
+name = "nlputils"
+version = "0.1.0"
+description = ""
+authors = ["ichitadon <ichitadon@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.dev-dependencies]
+black = { version = "*", allow-prereleases = true }
+autoflake = "^1.4"
+isort = "*"
+mypy = "*"
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.mypy]
+ignore_missing_imports = true
+
+warn_unused_configs = true
+disallow_any_generics = true
+disallow_subclassing_any = true
+# numpyの型がないためオフにする
+disallow_untyped_calls = false
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+# kfpの型がないためオフにする
+disallow_untyped_decorators = false
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_return_any = true
+implicit_reexport = true
+strict_equality = true
+
+[tool.isort]
+profile="black"
+
+[tool.black]
+line-length = 120
