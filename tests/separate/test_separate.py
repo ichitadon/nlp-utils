@@ -39,8 +39,8 @@ class TestSentenceSegmentation:
             testee = "(sentence1。)sentence2！（文3？文4）!文5?"
             pattern = [
                 SentenceSegmentation.DEAFULT_CORNER_BRACKET_PATTERN,
-                SentenceSegmentation.DEAFULT_PARENS_PATTERN,
-                r"（[^（）]*）",
+                SentenceSegmentation.DEAFULT_PARENTHESIS_PATTERN,
+                SentenceSegmentation.DEAFULT_FULLWIDTH_PARENTHESIS_PATTERN,
             ]
             target = SentenceSegmentation(parens_regex_patterns=pattern)
             expected = ["(sentence1。)sentence2！", "（文3？文4）!", "文5?"]

@@ -23,8 +23,8 @@
 >>> text = "彼は「こんにちは。」と言った。私も（ごきげんよう。）と返した。"
 >>> pattern = [
 ...     SentenceSegmentation.DEAFULT_CORNER_BRACKET_PATTERN,
-...     SentenceSegmentation.DEAFULT_PARENS_PATTERN,
-...     r"（[^（）]*）",
+...     SentenceSegmentation.DEAFULT_PARENTHESIS_PATTERN,
+...     SentenceSegmentation.DEAFULT_FULLWIDTH_PARENTHESIS_PATTERN,
 ... ]
 >>> segmenter = SentenceSegmentation(parens_regex_patterns=pattern)
 >>> segmenter.separate(text)

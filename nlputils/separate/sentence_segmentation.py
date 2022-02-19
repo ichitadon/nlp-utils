@@ -6,7 +6,8 @@ class SentenceSegmentation:
 
     # default patterns for Japanese
     DEAFULT_CORNER_BRACKET_PATTERN = r"「[^「」]*」"
-    DEAFULT_PARENS_PATTERN = r"\([^()]*\)"
+    DEAFULT_PARENTHESIS_PATTERN = r"\([^()]*\)"
+    DEAFULT_FULLWIDTH_PARENTHESIS_PATTERN = r"（[^（）]*）"
     DEFAULT_PUNCTUATION_PATTERN = r"。!?！？"
 
     # default chars
@@ -15,7 +16,7 @@ class SentenceSegmentation:
 
     def __init__(
         self,
-        parens_regex_patterns: List[str] = [DEAFULT_PARENS_PATTERN, DEAFULT_CORNER_BRACKET_PATTERN],
+        parens_regex_patterns: List[str] = [DEAFULT_PARENTHESIS_PATTERN, DEAFULT_CORNER_BRACKET_PATTERN],
         punctuation_pattern: str = DEFAULT_PUNCTUATION_PATTERN,
         escape_char: str = DEFAULT_ESCAPE_CHAR,
         separator_char: str = DEFAULT_SEPARATOR_CHAR,
